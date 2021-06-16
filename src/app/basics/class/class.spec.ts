@@ -49,4 +49,22 @@ describe('Pruebas de clases', () => {
 
   });
 
+  it('Debe retornar 0 de HP si el daño es mayor que la salud actual', () => {
+
+    const resp = player.getHurt(110);
+
+    expect(resp).toBe(0);
+
+  });
+
+  // Para ver el coverage el comando es: ng test --code-coverage
+  // Las branches son los if() {} else {}
+  it('Debe retornar 0 de HP si el daño es igual a la salud actual', () => {
+
+    const resp = player.getHurt(100);
+
+    expect(resp).toBe(0);
+
+  });
+
 });
